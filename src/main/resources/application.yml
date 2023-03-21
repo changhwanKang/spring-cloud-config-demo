@@ -1,0 +1,37 @@
+spring:
+  # 빈 재정의 허용
+  main:
+    allow-bean-definition-overriding: true
+
+#  rabbitmq:
+#    host: b-3d5233e6-7510-449d-a468-43c15630c334.mq.ap-northeast-2.amazonaws.com
+#    port: 5671
+#    username: master
+#    password: master123456789
+#    ssl:
+#      enabled: true
+#    listener:
+#      simple:
+#        acknowledge-mode: manual
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://changhwanKang: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@github.com/changhwanKang/config-repo.git
+    bus:
+      enabled: true
+cloud:
+  aws:
+    sqs:
+      queue:
+        url: https://sqs.ap-northeast-2.amazonaws.com/327066177061/sqs-paychat.fifo
+server:
+  port: 8888
+
+
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: busrefresh
